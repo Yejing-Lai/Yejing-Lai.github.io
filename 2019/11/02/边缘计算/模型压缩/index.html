@@ -50,18 +50,18 @@
   };
 </script>
 
-  <meta name="description" content="2019&#x2F;12&#x2F;13  不要用and把两个句子连起来。可以用先用句号先结束第一个句子，再用And连接另一个句子。 一般不用but，更多的用However。 尽量使用简单句，或者不使用嵌套超过一层的从句&#x2F;字句。（摘要除外） 时态单一，一般使用现在时。 固定搭配（defactor：事实上） 缩写使用：第一次缩写使用前黑出完整拼写（如果太多缩写则要在主要的地方使用符号表）">
+  <meta name="description" content="大网络使用Relu6很容易爆炸（Relu=max(0,x)）,而Relu6指的是min(max(0,x),6)。即控制最大值是6，为了在移动端设备float16的低精度的时候，也能有很好的数值分辨率。因为如果x很大的时候，则float16的精度无法描述这么大的精度值，带来精度损失。  全连接层就是用了很多歌卷积核（大小为上一个卷积层大小），最后变成一个数，即没有了普通卷积层中卷积核滑动窗口的概念">
 <meta name="keywords" content="算法,模型,边缘计算,杂">
 <meta property="og:type" content="article">
-<meta property="og:title" content="科技论文写作笔记">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;01&#x2F;%E6%9D%82&#x2F;%E7%A7%91%E6%8A%80%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C&#x2F;index.html">
+<meta property="og:title" content="模型压缩笔记">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97&#x2F;%E6%A8%A1%E5%9E%8B%E5%8E%8B%E7%BC%A9&#x2F;index.html">
 <meta property="og:site_name" content="Era blog">
-<meta property="og:description" content="2019&#x2F;12&#x2F;13  不要用and把两个句子连起来。可以用先用句号先结束第一个句子，再用And连接另一个句子。 一般不用but，更多的用However。 尽量使用简单句，或者不使用嵌套超过一层的从句&#x2F;字句。（摘要除外） 时态单一，一般使用现在时。 固定搭配（defactor：事实上） 缩写使用：第一次缩写使用前黑出完整拼写（如果太多缩写则要在主要的地方使用符号表）">
+<meta property="og:description" content="大网络使用Relu6很容易爆炸（Relu=max(0,x)）,而Relu6指的是min(max(0,x),6)。即控制最大值是6，为了在移动端设备float16的低精度的时候，也能有很好的数值分辨率。因为如果x很大的时候，则float16的精度无法描述这么大的精度值，带来精度损失。  全连接层就是用了很多歌卷积核（大小为上一个卷积层大小），最后变成一个数，即没有了普通卷积层中卷积核滑动窗口的概念">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-21T10:11:47.065Z">
+<meta property="og:updated_time" content="2020-03-21T09:37:28.529Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2019/11/01/%E6%9D%82/%E7%A7%91%E6%8A%80%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/">
+<link rel="canonical" href="http://yoursite.com/2019/11/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E6%A8%A1%E5%9E%8B%E5%8E%8B%E7%BC%A9/">
 
 
 <script id="page-configurations">
@@ -75,7 +75,7 @@
   };
 </script>
 
-  <title>科技论文写作笔记 | Era blog</title>
+  <title>模型压缩笔记 | Era blog</title>
   
 
 
@@ -189,7 +189,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/01/%E6%9D%82/%E7%A7%91%E6%8A%80%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E6%A8%A1%E5%9E%8B%E5%8E%8B%E7%BC%A9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/headimage.jpg">
@@ -202,7 +202,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          科技论文写作笔记
+          模型压缩笔记
         </h1>
 
         <div class="post-meta">
@@ -212,14 +212,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-11-01 23:20:24" itemprop="dateCreated datePublished" datetime="2019-11-01T23:20:24+08:00">2019-11-01</time>
+              <time title="创建时间：2019-11-02 01:41:01" itemprop="dateCreated datePublished" datetime="2019-11-02T01:41:01+08:00">2019-11-02</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-21 18:11:47" itemprop="dateModified" datetime="2019-12-21T18:11:47+08:00">2019-12-21</time>
+                <time title="修改时间：2020-03-21 17:37:28" itemprop="dateModified" datetime="2020-03-21T17:37:28+08:00">2020-03-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -227,8 +227,8 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9D%82/" itemprop="url" rel="index">
-                    <span itemprop="name">杂</span>
+                  <a href="/categories/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/" itemprop="url" rel="index">
+                    <span itemprop="name">边缘计算</span>
                   </a>
                 </span>
             </span>
@@ -239,7 +239,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>224</span>
+              <span>332</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -258,26 +258,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>2019/12/13</p>
-<ol>
-<li>不要用and把两个句子连起来。可以用先用句号先结束第一个句子，再用And连接另一个句子。</li>
-<li>一般不用but，更多的用However。</li>
-<li>尽量使用简单句，或者不使用嵌套超过一层的从句/字句。（摘要除外）</li>
-<li>时态单一，一般使用现在时。</li>
-<li>固定搭配（defactor：事实上）</li>
-<li>缩写使用：第一次缩写使用前黑出完整拼写（如果太多缩写则要在主要的地方使用符号表）</li>
+        <ol>
+<li><p>大网络使用Relu6很容易爆炸（Relu=max(0,x)）,而Relu6指的是min(max(0,x),6)。<br>即控制最大值是6，为了在移动端设备float16的低精度的时候，也能有很好的数值分辨率。因为<br>如果x很大的时候，则float16的精度无法描述这么大的精度值，带来精度损失。</p>
+</li>
+<li><p>全连接层就是用了很多歌卷积核（大小为上一个卷积层大小），最后变成一个数，即没有了普通卷积层中卷积核滑动窗口的概念。</p>
+</li>
+<li><p>op一般是值operation（操作）</p>
+</li>
+<li><p>feature map是每一个filter对输入进行卷积后所有的输出，其中，feature map中的每个channel对应每个filter的输出。在某一个卷积层中，有多少个filter，feature map就有多少个channel。</p>
+</li>
 </ol>
-<a id="more"></a>
-
-<p>论文辅助工具：</p>
-<ol>
-<li>latex</li>
-<li>绘图工具（看到好的图例要收集）</li>
-<li>文献管理工具（导入导出等）</li>
-</ol>
-<p>毕业论文：</p>
-<p>1. </p>
-
     </div>
 
     
@@ -296,16 +286,16 @@
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/2019/11/01/%E6%9D%82/hello-world/" rel="next" title="Hello World">
-                  <i class="fa fa-chevron-left"></i> Hello World
+                <a href="/2019/11/02/%E7%AE%97%E6%B3%95/%E7%81%AB%E8%BD%A6%E8%BF%9B%E5%87%BA%E7%AB%99/" rel="next" title="算法测试">
+                  <i class="fa fa-chevron-left"></i> 算法测试
                 </a>
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/2019/11/01/%E6%9D%82/hexo%E5%91%BD%E4%BB%A4/" rel="prev" title="hexo更新文章命令">
-                  hexo更新文章命令 <i class="fa fa-chevron-right"></i>
+                <a href="/2019/11/02/%E6%A8%A1%E5%9E%8B/caffe%E7%AC%94%E8%AE%B0/" rel="prev" title="caffe笔记">
+                  caffe笔记 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
