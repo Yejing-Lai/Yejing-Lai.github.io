@@ -50,15 +50,15 @@
   };
 </script>
 
-  <meta name="description" content="大网络使用Relu6很容易爆炸（Relu=max(0,x)）,而Relu6指的是min(max(0,x),6)。即控制最大值是6，为了在移动端设备float16的低精度的时候，也能有很好的数值分辨率。因为如果x很大的时候，则float16的精度无法描述这么大的精度值，带来精度损失。  全连接层就是用了很多歌卷积核（大小为上一个卷积层大小），最后变成一个数，即没有了普通卷积层中卷积核滑动窗口的概念">
+  <meta name="description" content="大网络使用Relu6很容易爆炸（Relu=max(0,x)）,而Relu6指的是min(max(0,x),6)。即控制最大值是6，为了在移动端设备float16的低精度的时候，也能有很好的数值分辨率。因为如果x很大的时候，则float16的精度无法描述这么大的精度值，带来精度损失。  全连接层就是用了很多个卷积核（大小为上一个卷积层大小），最后变成一个数，即没有了普通卷积层中卷积核滑动窗口的概念">
 <meta name="keywords" content="算法,模型,边缘计算,杂">
 <meta property="og:type" content="article">
 <meta property="og:title" content="模型压缩笔记">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97&#x2F;%E6%A8%A1%E5%9E%8B%E5%8E%8B%E7%BC%A9&#x2F;index.html">
 <meta property="og:site_name" content="Era blog">
-<meta property="og:description" content="大网络使用Relu6很容易爆炸（Relu=max(0,x)）,而Relu6指的是min(max(0,x),6)。即控制最大值是6，为了在移动端设备float16的低精度的时候，也能有很好的数值分辨率。因为如果x很大的时候，则float16的精度无法描述这么大的精度值，带来精度损失。  全连接层就是用了很多歌卷积核（大小为上一个卷积层大小），最后变成一个数，即没有了普通卷积层中卷积核滑动窗口的概念">
+<meta property="og:description" content="大网络使用Relu6很容易爆炸（Relu=max(0,x)）,而Relu6指的是min(max(0,x),6)。即控制最大值是6，为了在移动端设备float16的低精度的时候，也能有很好的数值分辨率。因为如果x很大的时候，则float16的精度无法描述这么大的精度值，带来精度损失。  全连接层就是用了很多个卷积核（大小为上一个卷积层大小），最后变成一个数，即没有了普通卷积层中卷积核滑动窗口的概念">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-21T09:37:28.529Z">
+<meta property="og:updated_time" content="2020-04-01T13:11:40.267Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2019/11/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E6%A8%A1%E5%9E%8B%E5%8E%8B%E7%BC%A9/">
@@ -219,7 +219,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-21 17:37:28" itemprop="dateModified" datetime="2020-03-21T17:37:28+08:00">2020-03-21</time>
+                <time title="修改时间：2020-04-01 21:11:40" itemprop="dateModified" datetime="2020-04-01T21:11:40+08:00">2020-04-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -239,7 +239,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>332</span>
+              <span>1.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -261,11 +261,25 @@
         <ol>
 <li><p>大网络使用Relu6很容易爆炸（Relu=max(0,x)）,而Relu6指的是min(max(0,x),6)。<br>即控制最大值是6，为了在移动端设备float16的低精度的时候，也能有很好的数值分辨率。因为<br>如果x很大的时候，则float16的精度无法描述这么大的精度值，带来精度损失。</p>
 </li>
-<li><p>全连接层就是用了很多歌卷积核（大小为上一个卷积层大小），最后变成一个数，即没有了普通卷积层中卷积核滑动窗口的概念。</p>
+<li><p>全连接层就是用了很多个卷积核（大小为上一个卷积层大小），最后变成一个数，即没有了普通卷积层中卷积核滑动窗口的概念。</p>
 </li>
 <li><p>op一般是值operation（操作）</p>
 </li>
-<li><p>feature map是每一个filter对输入进行卷积后所有的输出，其中，feature map中的每个channel对应每个filter的输出。在某一个卷积层中，有多少个filter，feature map就有多少个channel。</p>
+<li><p>feature map是每一个filter对输入进行卷积后所有的输出，其中，feature map中的每个channel对应每个filter的输出。在某一个卷积层中，有多少个filter，feature map就有多少个channel。（但是很多也说一个特征图就对应一个channel，比如输出有64个channel，则就是说输出了64的特征图）</p>
+</li>
+<li><p>权值共享就是指在一个卷积过程中，输出的某一个feature map中的每一个点的权值都是共享的，也就是说，卷积形为滑动窗口时使用的weight都是一样的。</p>
+</li>
+<li><p>FLOPS：注意全大写，是floating point operations per second的缩写，意指每秒浮点运算次数，理解为计算速度。是一个衡量硬件性能的指标。<br>FLOPs：注意s小写，是floating point operations的缩写（s表复数），意指浮点运算数，理解为计算量。可以用来衡量算法/模型的复杂度。<br>时间复杂度可用FLOPs来衡量，空间复杂度（params）包含两个部分：总参数量（模型体积）+各层输出特征图。<br>计算着两个东西可参考：<a href="https://zhuanlan.zhihu.com/p/31575074" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/31575074</a></p>
+</li>
+<li><p>dropout中是把<em>临时</em>以一定的概率p删掉（隐藏掉，并不是把其真的删掉，就是在某个batch过程中把这些神经元的激活值设为0）一些（一般来说是一半）的隐层神经元，在不同的batch里面置为0的神经元都不同。在测试阶段，每个神经单元的权重参数都要乘以概率p。参考：<a href="https://blog.csdn.net/program_developer/article/details/80737724" target="_blank" rel="noopener">https://blog.csdn.net/program_developer/article/details/80737724</a></p>
+</li>
+<li><p>全局平均池化（GAP）：一般用来替换掉全连接层，减少参数。比如在VGG-16分类任务中，如果最后要输出10个类，则直接在最后一层输出有10个channel（特征图），将这10个channel的所有值平均，得到十个数，再用softmax进行分类。</p>
+</li>
+<li><p>non-structure和structure有各自的好处和不同。filter(channel pruning)和layer pruning都是结构化剪枝，改变值的都是非结构话剪枝。</p>
+</li>
+<li><p>pool层（也叫下采样，降采样）是在做卷积的过程中同时运行的，比如输入224×224×64，先经max pooling（最大化池化），滤波器为2x2，步长为2，图像尺寸减半，池化后的尺寸变为112x112x64，然后再经128个3x3的卷积核，卷积，ReLU激活，尺寸变为112x112x128。<br>VGG16的详解参考：<a href="https://blog.csdn.net/weixin_43496706/article/details/101210981?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43496706/article/details/101210981?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task</a><br>pool层作用的详解：<a href="https://blog.csdn.net/zxyhhjs2017/article/details/78607469" target="_blank" rel="noopener">https://blog.csdn.net/zxyhhjs2017/article/details/78607469</a></p>
+</li>
+<li><p>ResNet：网络深度增加，准确度下降，这并不是过拟合的问题（因为层数增加的时候训练误差和测试误差都降低了，但是过拟合是训练误差高，而测试误差降低）。主要是学习恒等映射F(x)+x，x是输入</p>
 </li>
 </ol>
     </div>
@@ -286,16 +300,16 @@
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/2019/11/02/%E7%AE%97%E6%B3%95/%E7%81%AB%E8%BD%A6%E8%BF%9B%E5%87%BA%E7%AB%99/" rel="next" title="算法测试">
-                  <i class="fa fa-chevron-left"></i> 算法测试
+                <a href="/2019/11/01/%E6%9D%82/hexo%E5%91%BD%E4%BB%A4/" rel="next" title="hexo更新文章命令">
+                  <i class="fa fa-chevron-left"></i> hexo更新文章命令
                 </a>
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/2019/11/02/%E6%A8%A1%E5%9E%8B/caffe%E7%AC%94%E8%AE%B0/" rel="prev" title="caffe笔记">
-                  caffe笔记 <i class="fa fa-chevron-right"></i>
+                <a href="/2019/11/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/" rel="prev" title="边缘计算">
+                  边缘计算 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -350,7 +364,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -398,13 +412,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">2k</span>
+    <span title="站点总字数">6k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2 分钟</span>
+    <span title="站点阅读时长">5 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
   </div>
