@@ -58,7 +58,7 @@
 <meta property="og:site_name" content="Era blog">
 <meta property="og:description" content="python一切皆对象。 python中a = [1,2,3，’foo’]指的是list，list里面的元素可以不同类型。跟np.array()不同。可以互相转换 a^b表示a和b异或，对于Boolean，是a异或b，对于整数则是按位异或。 很多对象可以通过str函数直接转成字符串。如：a=5.6, s=str(a) python的交换不像其他语言。如果要交换a,b。则可以直接写成b,a=a,b">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-04T06:24:46.536Z">
+<meta property="og:updated_time" content="2020-04-05T11:58:14.500Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2019/11/01/%E6%9D%82/python/">
@@ -219,7 +219,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-04 14:24:46" itemprop="dateModified" datetime="2020-04-04T14:24:46+08:00">2020-04-04</time>
+                <time title="修改时间：2020-04-05 19:58:14" itemprop="dateModified" datetime="2020-04-05T19:58:14+08:00">2020-04-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -239,7 +239,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.1k</span>
+              <span>2.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -263,38 +263,28 @@
 <li>python中a = [1,2,3，’foo’]指的是list，list里面的元素可以不同类型。跟np.array()不同。可以互相转换</li>
 <li>a^b表示a和b异或，对于Boolean，是a异或b，对于整数则是按位异或。</li>
 <li>很多对象可以通过str函数直接转成字符串。如：a=5.6, s=str(a)</li>
-<li>python的交换不像其他语言。如果要交换a,b。则可以直接写成b,a=a,b</li>
-<li>list（可变）和tuple（不可变但是占用内存少，运行时间快）的区别可参考：<a href="https://blog.csdn.net/qq_878799579/article/details/72909828" target="_blank" rel="noopener">https://blog.csdn.net/qq_878799579/article/details/72909828</a></li>
+<li>python的交换不像其他语言。如果要交换a,b。则可以直接写成b,a=a,b<a id="more"></a></li>
 <li>在list中使用extend来向列表添加多个元素，比直接使用list1+list2要快（连接列表的两个方法）。</li>
 <li>在list对象类型中：sort是方法，直接改变原对象，sorted是函数，是生成原对象的拷贝，并未直接改变原对象。</li>
-<li>list的切片：首先list是左闭右开区间，即a[2:4]只取列表中2,3两个数。正索引的index是从0开始的，负索引是是从-1开始的，a[-1]代表最后一个元素。当要对列表或者元祖进行翻转的时候可以使用lst[::1]（lst是列表或者元祖类型）。数组进行切片索引的时候，也是左闭右开，比如a[:1]对于一个二维数组来说，就是只取了第一行(索引从0开始)</li>
+<li>list（可变）和tuple（不可变但是占用内存少，运行时间快）的区别可参考：<a href="https://blog.csdn.net/qq_878799579/article/details/72909828" target="_blank" rel="noopener">https://blog.csdn.net/qq_878799579/article/details/72909828</a><br>list的切片：首先list是左闭右开区间，即a[2:4]只取列表中2,3两个数。正索引的index是从0开始的，负索引是是从-1开始的，a[-1]代表最后一个元素。当要对列表或者元祖进行翻转的时候可以使用lst[::1]（lst是列表或者元祖类型）。数组进行切片索引的时候，也是左闭右开，比如a[:1]对于一个二维数组来说，就是只取了第一行(索引从0开始)</li>
 <li>enumerate函数返回(i,value)元组的序列，可以用来对数据建立索引。zip函数将列表、元祖或者其他序列的元素配对(两个或者多个都可以)，一般要配合list或者enumerate使用，比如list(zip(lst1,lst2))，返回[(,),(,)…]，直接输出zip(lst1,lst2)是没有值的，zip函数也可以将已配对的序列进行拆分。</li>
-<li>字符串替换：re.sub(pattern, repl, string, count=0, flags=0)。pattern可以使用正则表达式。例子：<blockquote>
-<blockquote>
-<blockquote>
-<p>a = re.sub(r‘(\d+)‘, ‘hello‘, ‘my numer is 400 and door num is 200‘)<br>a<br>‘my numer is hello and door num is hello‘ #数字400 和 200 被hello替换<br>\d是匹配数字字符[0-9]，+匹配一个或多个</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
+<li>字符串替换：re.sub(pattern, repl, string, count=0, flags=0)。pattern可以使用正则表达式。例子：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = re.sub(r‘(\d+)<span class="string">', '</span>hello<span class="string">', '</span>my numer <span class="keyword">is</span> <span class="number">400</span> <span class="keyword">and</span> door num <span class="keyword">is</span> <span class="number">200</span><span class="string">')</span></span><br><span class="line"><span class="string">print(a)</span></span><br><span class="line"><span class="string">'</span>my numer <span class="keyword">is</span> hello <span class="keyword">and</span> door num <span class="keyword">is</span> hello<span class="string">' #数字400 和 200 被hello替换</span></span><br></pre></td></tr></table></figure>
+\d是匹配数字字符[0-9]，+匹配一个或多个</li>
 <li>map()函数：会根据提供的函数对指定序列做映射。map(function, iterable, …)，第一个参数 function 以参数序列中的每一个元素调用 function 函数，返回包含每次 function 函数返回值的新列表。参考：<a href="https://www.runoob.com/python/python-func-map.html" target="_blank" rel="noopener">https://www.runoob.com/python/python-func-map.html</a></li>
 <li>arrange返回的是一个数组，range返回的是一个迭代器，list(range(10))会返回一个列表。</li>
 <li>神奇数组就是用整数数组去对数据进行索引，它与切片不同。神奇索引饮用后的修改与原数组无关，二切片引用后的修改使原数组变滑，布尔索引引用后的修改也不改变原来的数组。（注意引用数组的两个方式：比如在二维数组中，a[1,2]和a[1][2]是一样的)</li>
-<li>zip函数把多个列表按照索引一一对应打包成元组对象的列表。如：&gt;&gt;&gt;a = [1,2,3]<blockquote>
-<blockquote>
-<blockquote>
-<p>b = [4,5,6]<br>c = [4,5,6,7,8]<br>zipped = zip(a,b)     # 打包为元组的列表<br>[(1, 4), (2, 5), (3, 6)]<br>zip(a,c)              # 元素个数与最短的列表一致<br>[(1, 4), (2, 5), (3, 6)]</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
+<li>zip函数把多个列表按照索引一一对应打包成元组对象的列表。如：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>zipped = zip(a,b)     <span class="comment"># 打包为元组的列表</span></span><br><span class="line">[(<span class="number">1</span>, <span class="number">4</span>), (<span class="number">2</span>, <span class="number">5</span>), (<span class="number">3</span>, <span class="number">6</span>)]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>zip(a,c)              <span class="comment"># 元素个数与最短的列表一致</span></span><br><span class="line">[(<span class="number">1</span>, <span class="number">4</span>), (<span class="number">2</span>, <span class="number">5</span>), (<span class="number">3</span>, <span class="number">6</span>)]</span><br></pre></td></tr></table></figure></li>
 <li>np.where(condition,x,y)，表示了x if condition else y。其中的三个参数既可以是同等大小的数组，也可以是标量。</li>
 <li>arr = np.zeros((3,3)),np.empty((3,3)) , np.random.randn(3,3),np.random.normal(mu,sigma,size=()).<br>argmax返回的是最大数的索引</li>
 <li>any() 函数用于判断给定的可迭代参数 iterable 是否全部为 False，则返回 False，如果有一个为 True，则返回 True。</li>
 <li>再用reindex的时候，index或者columns里的列表参数要和原来的一样，如果不一样就会全都是空。<br>如：df1 = pd.DataFrame(np.arange(12).reshape(4,3),index=[‘one’,’two’,’three’,’four’],columns=[‘a’,’b’,’c’])<br>df3 = df1.reindex(index = [‘1’,’2’,’3’,’4’])，则输出全为空，若df3 = df1.reindex(index = [‘one’,’two’,’three’,’four’，’1’,’2’,’3’,’4’])，那只有后四行为空。</li>
 <li>在df中，取行都要用到loc或者iloc，取列可以直接df[‘列名’]。取一个df里的一个数可以使用df1.loc[‘行名’,’列名’]或者df1.iloc[‘行标’,’列标’]</li>
 <li>df使用apply函数去调用函数，默认是对df中的列（一个series）调用该函数，如果加入axis=’columns’参数则是在每一行调用该函数</li>
+<li>read_table可以用来读取txt等格式的文件，此时字段是以多种不同数量的空格分开，可以向read_table传入一个正则表达式作为分隔符，即添加sep=’正则表达式’作为分隔符。在read_table中如果列名的数量比列数少一个，则将会把第一列作为索引。</li>
+<li>在read_csv中，如果原来的数据就有列名，则直接读入数据,其中有无header项都可以。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_csv(<span class="string">'testcsv.csv'</span>,header = <span class="number">0</span>,<span class="comment">#names = [])</span></span><br></pre></td></tr></table></figure>
+在这个基础上可以加上nemes来改变列名，此时相当于直接覆盖了文件的第一行。<br>若csv文件没有列名，则读入的时候要设置header = None，此时获得的列名就是默认的0,1,2 …。也可以使用names直接改变列名</li>
 </ol>
+
     </div>
 
     
@@ -377,7 +367,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -431,7 +421,7 @@
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">5 分钟</span>
+    <span title="站点阅读时长">6 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
   </div>
