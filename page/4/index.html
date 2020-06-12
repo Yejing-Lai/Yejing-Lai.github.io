@@ -185,7 +185,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/01/%E6%9D%82/linux%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E6%A8%A1%E5%9E%8B%E5%8E%8B%E7%BC%A9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/headimage.jpg">
@@ -199,7 +199,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2019/11/01/%E6%9D%82/linux%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">linux笔记</a>
+            <a href="/2020/03/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E6%A8%A1%E5%9E%8B%E5%8E%8B%E7%BC%A9/" class="post-title-link" itemprop="url">模型压缩笔记</a>
         </h1>
 
         <div class="post-meta">
@@ -209,14 +209,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-11-01 23:20:24" itemprop="dateCreated datePublished" datetime="2019-11-01T23:20:24+08:00">2019-11-01</time>
+              <time title="创建时间：2020-03-02 00:00:00" itemprop="dateCreated datePublished" datetime="2020-03-02T00:00:00+08:00">2020-03-02</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-11 14:00:37" itemprop="dateModified" datetime="2020-06-11T14:00:37+08:00">2020-06-11</time>
+                <time title="修改时间：2020-06-12 17:05:47" itemprop="dateModified" datetime="2020-06-12T17:05:47+08:00">2020-06-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -224,8 +224,8 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9D%82/" itemprop="url" rel="index">
-                    <span itemprop="name">杂</span>
+                  <a href="/categories/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/" itemprop="url" rel="index">
+                    <span itemprop="name">边缘计算</span>
                   </a>
                 </span>
             </span>
@@ -236,7 +236,115 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>788</span>
+              <span>3.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li><p>大网络使用Relu6很容易爆炸（Relu=max(0,x)）,而Relu6指的是min(max(0,x),6)。<br>即控制最大值是6，为了在移动端设备float16的低精度的时候，也能有很好的数值分辨率。因为<br>如果x很大的时候，则float16的精度无法描述这么大的精度值，带来精度损失。</p>
+</li>
+<li><p>全连接层就是用了很多个卷积核（大小为上一个卷积层大小），最后变成一个数，即没有了普通卷积层中卷积核滑动窗口的概念。</p>
+</li>
+<li><p>op一般是值operation（操作）</p>
+</li>
+<li><p>feature map是每一个filter对输入进行卷积后所有的输出，其中，feature map中的每个channel对应每个filter的输出。在某一个卷积层中，有多少个filter，feature map就有多少个channel。（但是很多也说一个特征图就对应一个channel，比如输出有64个channel，则就是说输出了64的特征图）</p>
+</li>
+<li><p>权值共享就是指在一个卷积过程中，输出的某一个feature map中的每一个点的权值都是共享的，也就是说，卷积形为滑动窗口时使用的weight都是一样的。</p>
+</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/03/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E6%A8%A1%E5%9E%8B%E5%8E%8B%E7%BC%A9/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E7%9F%A5%E8%AF%86%E8%92%B8%E9%A6%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/headimage.jpg">
+      <meta itemprop="name" content="叶静">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Era blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E7%9F%A5%E8%AF%86%E8%92%B8%E9%A6%8F/" class="post-title-link" itemprop="url">知识蒸馏笔记</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-03-02 00:00:00" itemprop="dateCreated datePublished" datetime="2020-03-02T00:00:00+08:00">2020-03-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-06-12 17:00:01" itemprop="dateModified" datetime="2020-06-12T17:00:01+08:00">2020-06-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/" itemprop="url" rel="index">
+                    <span itemprop="name">边缘计算</span>
+                  </a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>88</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -256,21 +364,10 @@
 
       
           <ol>
-<li>改变目录名字: mv /home/lyj/abc /home/lyj/aaa</li>
-<li>清空终端屏幕快捷键:ctrl+L</li>
-<li>修改配置文件（相当于Windows中的环境变量），要改两处地方，参考：<a href="https://blog.csdn.net/hang916/article/details/79530108" target="_blank" rel="noopener">https://blog.csdn.net/hang916/article/details/79530108</a></li>
-<li>watch -n 10 nvidia-smi ：设置为每 10s 显示一次显存的情况</li>
-<li>nohup挂起进程在后台运行，可以看nohup.out文件看输出信息</li>
-<li>在linux中可以通过wget url下载一个tar.gz的文档。并使用tar -zxvf xxxx.tar.gz解压文档到当前目录。</li>
-<li>rm -f xxx 可以删除某个文件。rm -rf xxx删除某个文件夹。</li>
-<li>pwd显示当下的绝对目录</li>
-<li>nohup python -u  trainer.py &gt;out.log 2&gt;&amp;1 &amp;   使用nohup运行后台程序，注意使用nohup之后要正常退出终端（输入exit()）<br>任何nohup命令后都要有 &amp;;然后再回车键再输入exit()</li>
-<li>conda env list 或 conda info -e 查看当前存在哪些虚拟环境</li>
-<li>conda create -n your_env_name python=X.X（2.7、3.6等)<br>删除虚拟环境。<br>使用命令conda remove -n your_env_name(虚拟环境名称) –all，</li>
-<li>在当前目录下查找某个文件:find . -name “klibc”<br>如果不明确文件名称，可以使用通配符:find . -name “<em>libc</em>“</li>
-<li>ps -ef | grep nginx 查看现有的进程</li>
-<li>tar -xvf file.tar //解压 tar包<br>tar -xzvf file.tar.gz //解压tar.gz</li>
-<li>ps -ef：显示所有的进程号<br>ps pid号码：显示该进程pid的所有信息<br>ps -ef|grep 关键字：返回所有包含关键字的进程，关键字就是一个正则表达式</li>
+<li><p>知识蒸馏在教师网络和学生网络都输入图片，只是在做学生模型训练的时候，损失函数为教师网络软目标和硬目标的交叉熵。</p>
+</li>
+<li><p>知识蒸馏中会若两个层的维度不同，可以通过一个全连接层变成维度一样。</p>
+</li>
 </ol>
       
     </div>
@@ -290,7 +387,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/01/%E6%9D%82/c++%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E5%89%AA%E6%9E%9D/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/headimage.jpg">
@@ -304,7 +401,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2019/11/01/%E6%9D%82/c++%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">c++笔记</a>
+            <a href="/2020/03/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E5%89%AA%E6%9E%9D/" class="post-title-link" itemprop="url">剪枝笔记</a>
         </h1>
 
         <div class="post-meta">
@@ -314,14 +411,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-11-01 23:20:24" itemprop="dateCreated datePublished" datetime="2019-11-01T23:20:24+08:00">2019-11-01</time>
+              <time title="创建时间：2020-03-02 00:00:00" itemprop="dateCreated datePublished" datetime="2020-03-02T00:00:00+08:00">2020-03-02</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-05 12:23:48" itemprop="dateModified" datetime="2020-05-05T12:23:48+08:00">2020-05-05</time>
+                <time title="修改时间：2020-06-12 17:05:09" itemprop="dateModified" datetime="2020-06-12T17:05:09+08:00">2020-06-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -329,8 +426,8 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9D%82/" itemprop="url" rel="index">
-                    <span itemprop="name">杂</span>
+                  <a href="/categories/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/" itemprop="url" rel="index">
+                    <span itemprop="name">边缘计算</span>
                   </a>
                 </span>
             </span>
@@ -341,7 +438,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>220</span>
+              <span>759</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -361,102 +458,21 @@
 
       
           <ol>
-<li><p>A.B  A为对象或者结构体；<br>A-&gt;B  A为指针，-&gt;是成员提取，A-&gt;B是提取A中的成员B，A只能是指向类、结构、联合的指针；</p>
+<li><p>剪枝过程中把其中的矩阵变成0之后，通过判断是否等于0，若等于0就跳过，不进行计算，这样就相当于是减少了FLOPs。</p>
 </li>
-<li><p>string的排序:sort(str.begin(),str.end());vector的排序都使用这种形式，只有数组形式的排序才可以sort(a);<br>next_permutation(num,num+n)函数是对数组num中的前n个元素进行全排列，同时并改变num数组的值。str可以看做是一个数组。</p>
+<li><p>使用混合精度进行训练的时候。是指原始的weight是FP32的，将这个原始的weight转成FP16，通过前向传播，反向传播，获得FP16的梯度后。在进行更新的时候，使用原始的FP32的weight-FP16的梯度，最后更新的weight还是FP32的。这就是FP32和FP16进行混合训练，中间主要用了16位进行计算，在更新的时候再变成32位。</p>
+</li>
+<li><p>微调是经过剪枝后，去掉之前已经被被剪掉的连接（比如说mask），然后根据这个结构更新没有被剪掉的参数，修复精度。</p>
 </li>
 </ol>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/03/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E5%89%AA%E6%9E%9D/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
         
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/01/%E6%9D%82/java%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/headimage.jpg">
-      <meta itemprop="name" content="叶静">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Era blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/01/%E6%9D%82/java%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">java笔记</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-11-01 23:20:24" itemprop="dateCreated datePublished" datetime="2019-11-01T23:20:24+08:00">2019-11-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-03 17:45:47" itemprop="dateModified" datetime="2020-06-03T17:45:47+08:00">2020-06-03</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9D%82/" itemprop="url" rel="index">
-                    <span itemprop="name">杂</span>
-                  </a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>117</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li>Java中ArrayList和LinkedList区别参考：<a href="https://www.cnblogs.com/Ferda/p/10833863.html" target="_blank" rel="noopener">https://www.cnblogs.com/Ferda/p/10833863.html</a><br>区别：ArrayList是基于动态数组的结构，LinkedList是基于链表的结构。</li>
-</ol>
       
     </div>
 
@@ -575,7 +591,7 @@
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">15 分钟</span>
+    <span title="站点阅读时长">16 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
   </div>
