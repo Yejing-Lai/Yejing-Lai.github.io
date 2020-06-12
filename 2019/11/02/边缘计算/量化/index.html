@@ -50,18 +50,18 @@
   };
 </script>
 
-  <meta name="description" content="python一切皆对象。 python中a = [1,2,3，’foo’]指的是list，list里面的元素可以不同类型。跟np.array()不同。可以互相转换 a^b表示a和b异或，对于Boolean，是a异或b，对于整数则是按位异或。 很多对象可以通过str函数直接转成字符串。如：a=5.6, s=str(a) python的交换不像其他语言。如果要交换a,b。则可以直接写成b,a=a,b">
+  <meta name="description" content="量化分为三种：一对权重进行量化，二是对特征图进行量化（神经元输出），对梯度量化（训练过程中）  对二值或三值网络进行训练时，通常做法是网络前馈过程为二值或三值，梯度更新过程为实数值。  和其它 bit 数稍高的量化网络（例如三值网络、2-bit 网络、4-bit 网络）相比，二值网络最突出的优点在于，1-bit 乘加操作可以通过位运算高效实现，因此可以无缝运行在主流硬件平台（x86、ARM）上，">
 <meta name="keywords" content="算法,模型,边缘计算,杂">
 <meta property="og:type" content="article">
-<meta property="og:title" content="利用python进行数据分析笔记">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;01&#x2F;%E6%9D%82&#x2F;python&#x2F;index.html">
+<meta property="og:title" content="量化笔记">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97&#x2F;%E9%87%8F%E5%8C%96&#x2F;index.html">
 <meta property="og:site_name" content="Era blog">
-<meta property="og:description" content="python一切皆对象。 python中a = [1,2,3，’foo’]指的是list，list里面的元素可以不同类型。跟np.array()不同。可以互相转换 a^b表示a和b异或，对于Boolean，是a异或b，对于整数则是按位异或。 很多对象可以通过str函数直接转成字符串。如：a=5.6, s=str(a) python的交换不像其他语言。如果要交换a,b。则可以直接写成b,a=a,b">
+<meta property="og:description" content="量化分为三种：一对权重进行量化，二是对特征图进行量化（神经元输出），对梯度量化（训练过程中）  对二值或三值网络进行训练时，通常做法是网络前馈过程为二值或三值，梯度更新过程为实数值。  和其它 bit 数稍高的量化网络（例如三值网络、2-bit 网络、4-bit 网络）相比，二值网络最突出的优点在于，1-bit 乘加操作可以通过位运算高效实现，因此可以无缝运行在主流硬件平台（x86、ARM）上，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-05T11:58:14.500Z">
+<meta property="og:updated_time" content="2020-05-29T13:58:58.328Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2019/11/01/%E6%9D%82/python/">
+<link rel="canonical" href="http://yoursite.com/2019/11/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E9%87%8F%E5%8C%96/">
 
 
 <script id="page-configurations">
@@ -75,7 +75,7 @@
   };
 </script>
 
-  <title>利用python进行数据分析笔记 | Era blog</title>
+  <title>量化笔记 | Era blog</title>
   
 
 
@@ -189,7 +189,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/01/%E6%9D%82/python/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E9%87%8F%E5%8C%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/headimage.jpg">
@@ -202,7 +202,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          利用python进行数据分析笔记
+          量化笔记
         </h1>
 
         <div class="post-meta">
@@ -212,14 +212,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-11-01 23:20:24" itemprop="dateCreated datePublished" datetime="2019-11-01T23:20:24+08:00">2019-11-01</time>
+              <time title="创建时间：2019-11-02 01:41:01" itemprop="dateCreated datePublished" datetime="2019-11-02T01:41:01+08:00">2019-11-02</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-05 19:58:14" itemprop="dateModified" datetime="2020-04-05T19:58:14+08:00">2020-04-05</time>
+                <time title="修改时间：2020-05-29 21:58:58" itemprop="dateModified" datetime="2020-05-29T21:58:58+08:00">2020-05-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -227,8 +227,8 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9D%82/" itemprop="url" rel="index">
-                    <span itemprop="name">杂</span>
+                  <a href="/categories/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/" itemprop="url" rel="index">
+                    <span itemprop="name">边缘计算</span>
                   </a>
                 </span>
             </span>
@@ -239,14 +239,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.5k</span>
+              <span>1.1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>1 分钟</span>
             </span>
 
         </div>
@@ -259,30 +259,27 @@
 
       
         <ol>
-<li>python一切皆对象。</li>
-<li>python中a = [1,2,3，’foo’]指的是list，list里面的元素可以不同类型。跟np.array()不同。可以互相转换</li>
-<li>a^b表示a和b异或，对于Boolean，是a异或b，对于整数则是按位异或。</li>
-<li>很多对象可以通过str函数直接转成字符串。如：a=5.6, s=str(a)</li>
-<li>python的交换不像其他语言。如果要交换a,b。则可以直接写成b,a=a,b<a id="more"></a></li>
-<li>在list中使用extend来向列表添加多个元素，比直接使用list1+list2要快（连接列表的两个方法）。</li>
-<li>在list对象类型中：sort是方法，直接改变原对象，sorted是函数，是生成原对象的拷贝，并未直接改变原对象。</li>
-<li>list（可变）和tuple（不可变但是占用内存少，运行时间快）的区别可参考：<a href="https://blog.csdn.net/qq_878799579/article/details/72909828" target="_blank" rel="noopener">https://blog.csdn.net/qq_878799579/article/details/72909828</a><br>list的切片：首先list是左闭右开区间，即a[2:4]只取列表中2,3两个数。正索引的index是从0开始的，负索引是是从-1开始的，a[-1]代表最后一个元素。当要对列表或者元祖进行翻转的时候可以使用lst[::1]（lst是列表或者元祖类型）。数组进行切片索引的时候，也是左闭右开，比如a[:1]对于一个二维数组来说，就是只取了第一行(索引从0开始)</li>
-<li>enumerate函数返回(i,value)元组的序列，可以用来对数据建立索引。zip函数将列表、元祖或者其他序列的元素配对(两个或者多个都可以)，一般要配合list或者enumerate使用，比如list(zip(lst1,lst2))，返回[(,),(,)…]，直接输出zip(lst1,lst2)是没有值的，zip函数也可以将已配对的序列进行拆分。</li>
-<li>字符串替换：re.sub(pattern, repl, string, count=0, flags=0)。pattern可以使用正则表达式。例子：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = re.sub(r‘(\d+)<span class="string">', '</span>hello<span class="string">', '</span>my numer <span class="keyword">is</span> <span class="number">400</span> <span class="keyword">and</span> door num <span class="keyword">is</span> <span class="number">200</span><span class="string">')</span></span><br><span class="line"><span class="string">print(a)</span></span><br><span class="line"><span class="string">'</span>my numer <span class="keyword">is</span> hello <span class="keyword">and</span> door num <span class="keyword">is</span> hello<span class="string">' #数字400 和 200 被hello替换</span></span><br></pre></td></tr></table></figure>
-\d是匹配数字字符[0-9]，+匹配一个或多个</li>
-<li>map()函数：会根据提供的函数对指定序列做映射。map(function, iterable, …)，第一个参数 function 以参数序列中的每一个元素调用 function 函数，返回包含每次 function 函数返回值的新列表。参考：<a href="https://www.runoob.com/python/python-func-map.html" target="_blank" rel="noopener">https://www.runoob.com/python/python-func-map.html</a></li>
-<li>arrange返回的是一个数组，range返回的是一个迭代器，list(range(10))会返回一个列表。</li>
-<li>神奇数组就是用整数数组去对数据进行索引，它与切片不同。神奇索引饮用后的修改与原数组无关，二切片引用后的修改使原数组变滑，布尔索引引用后的修改也不改变原来的数组。（注意引用数组的两个方式：比如在二维数组中，a[1,2]和a[1][2]是一样的)</li>
-<li>zip函数把多个列表按照索引一一对应打包成元组对象的列表。如：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>zipped = zip(a,b)     <span class="comment"># 打包为元组的列表</span></span><br><span class="line">[(<span class="number">1</span>, <span class="number">4</span>), (<span class="number">2</span>, <span class="number">5</span>), (<span class="number">3</span>, <span class="number">6</span>)]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>zip(a,c)              <span class="comment"># 元素个数与最短的列表一致</span></span><br><span class="line">[(<span class="number">1</span>, <span class="number">4</span>), (<span class="number">2</span>, <span class="number">5</span>), (<span class="number">3</span>, <span class="number">6</span>)]</span><br></pre></td></tr></table></figure></li>
-<li>np.where(condition,x,y)，表示了x if condition else y。其中的三个参数既可以是同等大小的数组，也可以是标量。</li>
-<li>arr = np.zeros((3,3)),np.empty((3,3)) , np.random.randn(3,3),np.random.normal(mu,sigma,size=()).<br>argmax返回的是最大数的索引</li>
-<li>any() 函数用于判断给定的可迭代参数 iterable 是否全部为 False，则返回 False，如果有一个为 True，则返回 True。</li>
-<li>再用reindex的时候，index或者columns里的列表参数要和原来的一样，如果不一样就会全都是空。<br>如：df1 = pd.DataFrame(np.arange(12).reshape(4,3),index=[‘one’,’two’,’three’,’four’],columns=[‘a’,’b’,’c’])<br>df3 = df1.reindex(index = [‘1’,’2’,’3’,’4’])，则输出全为空，若df3 = df1.reindex(index = [‘one’,’two’,’three’,’four’，’1’,’2’,’3’,’4’])，那只有后四行为空。</li>
-<li>在df中，取行都要用到loc或者iloc，取列可以直接df[‘列名’]。取一个df里的一个数可以使用df1.loc[‘行名’,’列名’]或者df1.iloc[‘行标’,’列标’]</li>
-<li>df使用apply函数去调用函数，默认是对df中的列（一个series）调用该函数，如果加入axis=’columns’参数则是在每一行调用该函数</li>
-<li>read_table可以用来读取txt等格式的文件，此时字段是以多种不同数量的空格分开，可以向read_table传入一个正则表达式作为分隔符，即添加sep=’正则表达式’作为分隔符。在read_table中如果列名的数量比列数少一个，则将会把第一列作为索引。</li>
-<li>在read_csv中，如果原来的数据就有列名，则直接读入数据,其中有无header项都可以。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_csv(<span class="string">'testcsv.csv'</span>,header = <span class="number">0</span>,<span class="comment">#names = [])</span></span><br></pre></td></tr></table></figure>
-在这个基础上可以加上nemes来改变列名，此时相当于直接覆盖了文件的第一行。<br>若csv文件没有列名，则读入的时候要设置header = None，此时获得的列名就是默认的0,1,2 …。也可以使用names直接改变列名</li>
+<li><p>量化分为三种：一对权重进行量化，二是对特征图进行量化（神经元输出），对梯度量化（训练过程中）</p>
+</li>
+<li><p>对二值或三值网络进行训练时，通常做法是网络前馈过程为二值或三值，梯度更新过程为实数值。</p>
+</li>
+<li><p>和其它 bit 数稍高的量化网络（例如三值网络、2-bit 网络、4-bit 网络）相比，二值网络最突出的优点在于，1-bit 乘加操作可以通过位运算高效实现，因此可以无缝运行在主流硬件平台（x86、ARM）上，而三值、2-bit、4-bit 等等操作需要特殊硬件平台（FPGA、ASIC）支持。</p>
+</li>
+<li><p>量化的retrain：一般是把foward阶段把所有的权重值（w）量化后，再通过考虑梯度的量化（梯度近似）去拟合原来的量化函数，使得反向传播的时候更新值可以将量化函数考虑进去。将梯度量化后的值再对w进行更新，再使用量化函数，即w’=Q(w-α△w)。</p>
+</li>
+<li><p>在XNOR-net论文中，Binary Weight在卷积中的操作只涉及加减是因为，量化后的权重的符号与原来权重相同，所以做卷积操作的时候只是把所有输入的CHW的所有值取绝对值再加起来。</p>
+</li>
+<li><p>均匀量化的本质是用一个归一化因子将浮点数映射到它们最近的定点整数。</p>
+</li>
+<li><p>XNOR-net网络的尺度因子α是一个浮点数，BP时使用二值化后的权重计算梯度，更新梯度值时却用原来的权重值减去用二值化后的权重梯度来进行更新。也就是说(Wt+1=Wt-lr*△W~t)。<br>LQ-Net训练使用的尺度因子是一个向量v（K维，即用K个bit去量化。比如K=3，则v=[1,2,4]），这个v和量化后的值都是要优化的变量。在反向传递中，直接误差反向传播将是有问题的，因为量化函数的梯度几乎在任何地方都是0。所以BP过程为：对于激活，我们将量化函数的梯度设置为1（量化函数中输入的激活值激活值在q1和q2K时），其他地方为0；对于权重，梯度在任何地方都设置为1<br>IR-Net训练的尺度因子是一个整数位移标量s。反向传播是通过逐步逼近反向传播中的符号函数来最小化梯度的信息损失。也就是通过近似sign函数，这个近似函数是连续的，可以直接求偏导数。原始近似越接近，则反向传播偏导时损失就会越小。</p>
+</li>
+</ol><a id="more"></a>
+<p><em>8</em>. 所以可以考虑对不同的量化函数如何进行梯度近似（逼近原函数）。</p>
+<ol start="9">
+<li><p>量化主要考虑：（1）用什么样的量化函数（2）怎样进行微调，怎样进行反向传播。</p>
+</li>
+<li><p>量化若分为参数共享和低比特量化：那参数共享一般只能达到压缩存储的效果，在网络导入内存之后，它们需要恢复被量化的权重，最终的内存占用和前向速度都没有达到优化。对于低比特量化，可以使用特殊的计算库或硬件，从而可以在计算速度上得到提升。</p>
+</li>
 </ol>
 
     </div>
@@ -303,16 +300,16 @@
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/2019/11/01/%E6%9D%82/hello-world/" rel="next" title="Hello World">
-                  <i class="fa fa-chevron-left"></i> Hello World
+                <a href="/2019/11/01/%E6%9D%82/hexo%E5%91%BD%E4%BB%A4/" rel="next" title="hexo更新文章命令">
+                  <i class="fa fa-chevron-left"></i> hexo更新文章命令
                 </a>
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/2019/11/01/%E6%9D%82/%E7%A7%91%E6%8A%80%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/" rel="prev" title="科技论文写作笔记">
-                  科技论文写作笔记 <i class="fa fa-chevron-right"></i>
+                <a href="/2019/11/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E7%9F%A5%E8%AF%86%E8%92%B8%E9%A6%8F/" rel="prev" title="知识蒸馏笔记">
+                  知识蒸馏笔记 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -367,7 +364,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -415,13 +412,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">6k</span>
+    <span title="站点总字数">17k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">6 分钟</span>
+    <span title="站点阅读时长">15 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
   </div>

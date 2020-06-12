@@ -50,15 +50,15 @@
   };
 </script>
 
-  <meta name="description" content="一个epoch就是对整个数据进行一次训练，比如在做梯度下降的时候，一个epoch就是对所有数据进行一次训练（梯度下降：全部数据集（BGD）一起训练，批次（MBGD），随机（一个个数据来训练SGD））">
+  <meta name="description" content="一个epoch就是对整个数据进行一次训练，比如在做梯度下降的时候，一个epoch就是对所有数据进行一次训练（梯度下降：全部数据集（BGD）一起训练，批次（MBGD），随机（一个个数据来训练SGD））  Resnet就是加上跳跃链接：没两层加上一个捷径，构成一个残差快。参考：https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_29893385&#x2F;article&#x2F;details&#x2F;81207203  卷积">
 <meta name="keywords" content="算法,模型,边缘计算,杂">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习笔记">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;%E6%A8%A1%E5%9E%8B&#x2F;%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="Era blog">
-<meta property="og:description" content="一个epoch就是对整个数据进行一次训练，比如在做梯度下降的时候，一个epoch就是对所有数据进行一次训练（梯度下降：全部数据集（BGD）一起训练，批次（MBGD），随机（一个个数据来训练SGD））">
+<meta property="og:description" content="一个epoch就是对整个数据进行一次训练，比如在做梯度下降的时候，一个epoch就是对所有数据进行一次训练（梯度下降：全部数据集（BGD）一起训练，批次（MBGD），随机（一个个数据来训练SGD））  Resnet就是加上跳跃链接：没两层加上一个捷径，构成一个残差快。参考：https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_29893385&#x2F;article&#x2F;details&#x2F;81207203  卷积">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-05T08:06:59.932Z">
+<meta property="og:updated_time" content="2020-05-07T15:19:25.228Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2019/11/02/%E6%A8%A1%E5%9E%8B/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
@@ -219,7 +219,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-05 16:06:59" itemprop="dateModified" datetime="2020-04-05T16:06:59+08:00">2020-04-05</time>
+                <time title="修改时间：2020-05-07 23:19:25" itemprop="dateModified" datetime="2020-05-07T23:19:25+08:00">2020-05-07</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -239,7 +239,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>99</span>
+              <span>712</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -259,7 +259,20 @@
 
       
         <ol>
-<li>一个epoch就是对整个数据进行一次训练，比如在做梯度下降的时候，一个epoch就是对所有数据进行一次训练（梯度下降：全部数据集（BGD）一起训练，批次（MBGD），随机（一个个数据来训练SGD））</li>
+<li><p>一个epoch就是对整个数据进行一次训练，比如在做梯度下降的时候，一个epoch就是对所有数据进行一次训练（梯度下降：全部数据集（BGD）一起训练，批次（MBGD），随机（一个个数据来训练SGD））</p>
+</li>
+<li><p>Resnet就是加上跳跃链接：没两层加上一个捷径，构成一个残差快。<br>参考：<a href="https://blog.csdn.net/qq_29893385/article/details/81207203" target="_blank" rel="noopener">https://blog.csdn.net/qq_29893385/article/details/81207203</a></p>
+</li>
+<li><p>卷积后的长宽公式：output = (intput - filter_size + 2 x padding) / stride + 1<br> pool后的长宽公式也是一样 </p>
+</li>
+<li><p>多模态学习：比如图像的向量和文本的向量映射到同一个向量空间去。<br>参考：<a href="https://zhuanlan.zhihu.com/p/53511144" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/53511144</a></p>
+</li>
+<li><p>最大化互信息条件就是最大化随机事件的相关性。在机器学习中，理想情况下，当互信息越大，说明两个事件的相关性越大，可以认为从数据集中拟合出来的分布与真是分布相同。</p>
+</li>
+<li><p>Grid Search：一种调参手段；穷举搜索：在所有候选的参数选择中，通过循环遍历，尝试每一种可能性，表现最好的参数就是最终的结果。其原理就像是在数组里找最大值。（为什么叫网格搜索？以有两个参数的模型为例，参数a有3种可能，参数b有4种可能，把所有可能性列出来，可以表示成一个3*4的表格，其中每个cell就是一个网格，循环过程就像是在每个网格里遍历、搜索，所以叫grid search）<br>参考：<a href="https://kknews.cc/code/aaaxmen.html" target="_blank" rel="noopener">https://kknews.cc/code/aaaxmen.html</a></p>
+</li>
+<li><p>RoI Pooling和RoI Align原理：<a href="https://www.cnblogs.com/wangyong/p/8523814.html" target="_blank" rel="noopener">https://www.cnblogs.com/wangyong/p/8523814.html</a></p>
+</li>
 </ol>
     </div>
 
@@ -279,8 +292,8 @@
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/2019/11/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E6%A8%A1%E5%9E%8B%E5%8E%8B%E7%BC%A9/" rel="next" title="模型压缩笔记">
-                  <i class="fa fa-chevron-left"></i> 模型压缩笔记
+                <a href="/2019/11/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E5%89%AA%E6%9E%9D/" rel="next" title="剪枝笔记">
+                  <i class="fa fa-chevron-left"></i> 剪枝笔记
                 </a>
             </div>
 
@@ -343,7 +356,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -391,13 +404,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">6k</span>
+    <span title="站点总字数">17k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">6 分钟</span>
+    <span title="站点阅读时长">15 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
   </div>
