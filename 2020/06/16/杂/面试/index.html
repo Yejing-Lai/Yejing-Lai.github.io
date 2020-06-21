@@ -50,14 +50,18 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Era blog">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;tags&#x2F;%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97&#x2F;page&#x2F;2&#x2F;index.html">
+  <meta name="description" content="为什么PCA中要通过计算协方差矩阵来得到包含最大差异性的主成分方向呢？答：PCA本来就是在原始的空间中顺序的找到一组互相正交的坐标轴。采用方差最大的方法（我们希望投影后投影值尽可能分散，而这种分散程度，可以用数学上的方差来表述）。若根据方差最大找到一个第一个方向，那第二个方向就是于第一个方向正交且方差最大的哪个方向。直观上说就是让两个字段尽可能的表示更多的原始信息，不要存在线性相关性。而数学上可">
+<meta name="keywords" content="算法,模型,边缘计算,杂">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;16&#x2F;%E6%9D%82&#x2F;%E9%9D%A2%E8%AF%95&#x2F;index.html">
 <meta property="og:site_name" content="Era blog">
+<meta property="og:description" content="为什么PCA中要通过计算协方差矩阵来得到包含最大差异性的主成分方向呢？答：PCA本来就是在原始的空间中顺序的找到一组互相正交的坐标轴。采用方差最大的方法（我们希望投影后投影值尽可能分散，而这种分散程度，可以用数学上的方差来表述）。若根据方差最大找到一个第一个方向，那第二个方向就是于第一个方向正交且方差最大的哪个方向。直观上说就是让两个字段尽可能的表示更多的原始信息，不要存在线性相关性。而数学上可">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-06-17T09:03:13.004Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/tags/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/page/2/">
+<link rel="canonical" href="http://yoursite.com/2020/06/16/%E6%9D%82/%E9%9D%A2%E8%AF%95/">
 
 
 <script id="page-configurations">
@@ -65,13 +69,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>标签: 边缘计算 | Era blog</title>
+  <title>面试 | Era blog</title>
   
 
 
@@ -180,196 +184,122 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h1 class="collection-header">边缘计算
-          <small>标签</small>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/16/%E6%9D%82/%E9%9D%A2%E8%AF%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/headimage.jpg">
+      <meta itemprop="name" content="叶静">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Era blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          面试
         </h1>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-06-16 00:00:00" itemprop="dateCreated datePublished" datetime="2020-06-16T00:00:00+08:00">2020-06-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-06-17 17:03:13" itemprop="dateModified" datetime="2020-06-17T17:03:13+08:00">2020-06-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9D%82/" itemprop="url" rel="index">
+                    <span itemprop="name">杂</span>
+                  </a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>288</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2020</h1>
+        <ol>
+<li>为什么PCA中要通过计算协方差矩阵来得到包含最大差异性的主成分方向呢？<br>答：PCA本来就是在原始的空间中顺序的找到一组互相正交的坐标轴。采用方差最大的方法（我们希望投影后投影值尽可能分散，而这种分散程度，可以用数学上的方差来表述）。<br>若根据方差最大找到一个第一个方向，那第二个方向就是于第一个方向正交且方差最大的哪个方向。直观上说就是让两个字段尽可能的表示更多的原始信息，不要存在线性相关性。而数学上可以用两个字段的协方差表示其相关性。<br>当协方差为0时，表示两个字段完全独立。为了让协方差为0，我们选择第二个基时只能在与第一个基正交的方向上选择。因此最终选择的两个方向一定是正交的。</li>
+</ol>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-06T00:00:00+08:00"
-              content="2020-03-06">
-          03-06
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"># 算法</a>
+              <a href="/tags/%E6%A8%A1%E5%9E%8B/" rel="tag"># 模型</a>
+              <a href="/tags/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/" rel="tag"># 边缘计算</a>
+              <a href="/tags/%E6%9D%82/" rel="tag"># 杂</a>
+          </div>
 
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/06/%E6%9D%82/%E5%88%A9%E7%94%A8python%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/" itemprop="url">
-            <span itemprop="name">利用python进行数据分析笔记</span>
-          </a>
-      </h2>
+        
 
-    </header>
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2020/05/10/%E6%9D%82/linux%E7%AC%94%E8%AE%B0/" rel="next" title="linux笔记">
+                  <i class="fa fa-chevron-left"></i> linux笔记
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/2020/06/16/%E6%9D%82/%E6%8E%92%E5%BA%8F/" rel="prev" title="排序">
+                  排序 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
   </article>
+  
+  
+  
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-02T00:00:00+08:00"
-              content="2020-03-02">
-          03-02
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E5%89%AA%E6%9E%9D/" itemprop="url">
-            <span itemprop="name">剪枝笔记</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-02T00:00:00+08:00"
-              content="2020-03-02">
-          03-02
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E6%A8%A1%E5%9E%8B%E5%8E%8B%E7%BC%A9/" itemprop="url">
-            <span itemprop="name">模型压缩笔记</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-02T00:00:00+08:00"
-              content="2020-03-02">
-          03-02
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E7%9F%A5%E8%AF%86%E8%92%B8%E9%A6%8F/" itemprop="url">
-            <span itemprop="name">知识蒸馏笔记</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-02T00:00:00+08:00"
-              content="2020-03-02">
-          03-02
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/02/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/%E9%87%8F%E5%8C%96/" itemprop="url">
-            <span itemprop="name">量化笔记</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-11-02T01:41:01+08:00"
-              content="2019-11-02">
-          11-02
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/11/02/%E7%AE%97%E6%B3%95/%E7%81%AB%E8%BD%A6%E8%BF%9B%E5%87%BA%E7%AB%99/" itemprop="url">
-            <span itemprop="name">算法测试</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-11-01T23:20:24+08:00"
-              content="2019-11-01">
-          11-01
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/11/01/%E6%9D%82/hexo%E5%91%BD%E4%BB%A4/" itemprop="url">
-            <span itemprop="name">hexo更新文章命令</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-11-01T23:20:24+08:00"
-              content="2019-11-01">
-          11-01
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/11/01/%E6%9D%82/%E7%A7%91%E6%8A%80%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/" itemprop="url">
-            <span itemprop="name">科技论文写作笔记</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-    </div>
   </div>
-  
-  
-  
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/tags/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/tags/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/">1</a><span class="page-number current">2</span>
-  </nav>
-
 
 
           </div>
